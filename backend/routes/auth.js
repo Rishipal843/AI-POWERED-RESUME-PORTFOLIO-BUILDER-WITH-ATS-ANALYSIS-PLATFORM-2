@@ -18,33 +18,37 @@ router4.get('/google/callback',
   (req, res) => {
 
     // ✅ get email from req.user
-    const userEmail = req.user.email;
+    if (!req.user) {
+      console.error("Google auth callback: no user on req");
+      return res.status(401).json({ error: "Unauthorized" });
+    }
 
-    // ✅ store email in cookie
-    res.cookie("username", userEmail, {
+    const isProduction = process.env.NODE_ENV === "production";
+
+    const cookieOptions = {
       path: "/",
       expires: new Date(Date.now() + 86400000), // 1 day
-      secure: false, // true in production (HTTPS)
-      httpOnly: false, // frontend can read it
-      sameSite: "lax",
-    });
+      httpOnly: false,
+    };
+
+    if (isProduction) {
+      cookieOptions.secure = true;
+      cookieOptions.sameSite = "none";
+    }
+
+    const userEmail = req.user.email;
+
+    res.cookie("username", userEmail, cookieOptions);
 
     const token = jwt.sign(
       { id: req.user._id },
-      "rishipal@1234",
+      process.env.JWT_SECRET || "rishipal@1234",
       { expiresIn: "1d" }
     );
 
-    res.cookie("token", token, {
-      path: "/",
-      expires: new Date(Date.now() + 86400000),
-      secure: false,
-      httpOnly: false,
-      sameSite: "lax",
-    });
+    res.cookie("token", token, cookieOptions);
 
-
-    res.redirect(`https://ai-powered-resume-portfolio-builder-lemon.vercel.app/dashboard`);
+    res.redirect("https://ai-powered-resume-portfolio-builder-lemon.vercel.app/dashboard");
   }
 );
 
