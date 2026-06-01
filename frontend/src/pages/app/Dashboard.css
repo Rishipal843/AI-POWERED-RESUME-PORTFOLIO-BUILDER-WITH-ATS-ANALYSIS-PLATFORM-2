@@ -1,0 +1,241 @@
+/* --- Dashboard Modern Styles --- */
+
+.dashboard-wrapper {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  background-color: #fcfcfc;
+  min-height: 100vh;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dash-header h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1a1f36;
+  margin-bottom: 20px;
+}
+
+.text-highlight { color: #f15a24; }
+
+.dash-header p {
+  color: #697386;
+  font-size: 1rem;
+}
+
+.btn-pro-upgrade {
+  background: #1a1f36;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-pro-upgrade:hover { transform: translateY(-2px); }
+
+/* Action Cards - Horizontal Flow */
+.action-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.action-card-modern {
+  text-decoration: none;
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #f0f2f5;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.action-card-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.action-icon-bg {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: #f8f9fa;
+}
+
+/* Glow Borders on Hover */
+.teal-glow:hover { border-color: #00d1c1; }
+.blue-glow:hover { border-color: #5833ee; }
+.pink-glow:hover { border-color: #f15a24; }
+
+.action-info h3 {
+  font-size: 1.1rem;
+  color: #1a1f36;
+  margin-bottom: 4px;
+}
+
+.action-info p {
+  font-size: 0.85rem;
+  color: #697386;
+}
+
+.action-arrow {
+  margin-left: auto;
+  color: #cbd5e0;
+  font-weight: 700;
+  transition: transform 0.3s;
+}
+
+.action-card-modern:hover .action-arrow {
+  transform: translateX(5px);
+  color: #1a1f36;
+}
+
+
+
+
+/* --- Dashboard Analytics Grid --- */
+
+.dashboard-analytics-section {
+  margin-top: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.analytics-header h3 {
+  font-size: 1.2rem;
+  color: #1a1f36;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.analytics-card {
+  background: #ffffff;
+  border: 1px solid #f0f2f5;
+  border-radius: 28px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+/* Plan & Status Badges */
+.plan-pill { font-size: 0.65rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; }
+.plan-pill.paid { background: #f15a24; color: #fff; }
+.plan-pill.free { background: #f1f5f9; color: #64748b; }
+
+.status-badge { background: #ecfdf5; color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; }
+
+/* Scan Circle Visual */
+.progress-visual { display: flex; justify-content: center; margin: 10px 0; }
+.circle-chart {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-inner {
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.current-val { font-size: 1.5rem; font-weight: 800; color: #1a1f36; }
+.unit-label { font-size: 0.75rem; color: #64748b; margin: 0; }
+
+/* Portfolio & Impact Numbers */
+.huge-number { font-size: 3rem; font-weight: 900; color: #1a1f36; line-height: 1; }
+.portfolio-stat-main { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.stat-text-group strong { display: block; font-size: 1rem; color: #1a1f36; }
+.stat-text-group p { font-size: 0.8rem; color: #64748b; margin: 0; }
+
+.portfolio-url-preview {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #5833ee;
+  border: 1px dashed #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.manage-btn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a1f36;
+  font-size: 0.9rem;
+}
+
+/* Impact Chart */
+.impact-sub { color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
+.mini-bar-chart { display: flex; align-items: flex-end; gap: 5px; height: 40px; }
+.chart-bar { flex: 1; background: #f15a2420; border-radius: 3px; }
+.chart-bar.active { background: #f15a24; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .analytics-grid { grid-template-columns: 1fr; }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .action-row { grid-template-columns: 1fr; }
+  .stats-container-grid { grid-template-columns: 1fr 1fr; }
+}

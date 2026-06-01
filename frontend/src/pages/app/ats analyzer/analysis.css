@@ -1,0 +1,307 @@
+/* --- Container & Layout --- */
+.analysis-container {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 0 100px;
+  font-family: 'Inter', sans-serif;
+  color: #1a1f36;
+  position: relative; /* Required for absolute positioning of back-btn */
+}
+
+/* --- Back Button (Top Left) --- */
+.back-btn {
+  background: #ffffff;
+  color: #1a1f36;
+  border: 1px solid #e2e8f0;
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.back-btn:hover {
+  background: #f8fafc;
+  border-color: #f15a24;
+  color: #f15a24;
+  transform: translateX(-3px); /* Subtle nudge to the left */
+}
+
+.tabs-container1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 100px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Tabs Navigation --- */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 100px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px; /* Added space to prevent overlap with back-btn on small screens */
+}
+
+.tab-btn {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: #f15a24; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Header --- */
+.analysis-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.analysis-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.resume-analysis {
+  color: #f15a24; 
+}
+
+.analysis-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* --- Circular Score Section --- */
+.score-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.score-circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-value {
+  text-align: center;
+  z-index: 2;
+}
+
+.score-value h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  color: #1a1f36;
+}
+
+.score-value span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+.progress-ring {
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.8s ease-out;
+}
+
+/* --- Skills Grid & Cards --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.success-bg { background: #ecfdf5; color: #10b981; }
+.danger-bg { background: #fef2f2; color: #ef4444; }
+
+.card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+}
+
+.count-badge {
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.skill-tag.found { background: #f0fdf4; color: #166534; border: 1px solid #dcfce7; }
+.skill-tag.missing { background: #fff1f2; color: #991b1b; border: 1px solid #fee2e2; }
+
+/* --- Improvement Suggestions --- */
+.suggestions-section {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sparkle { color: #f15a24; font-size: 1.2rem; }
+
+.section-title h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.suggestion-item {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.target { color: #f15a24; font-size: 1.2rem; }
+
+.suggestion-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.priority {
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.priority.high { background: #fee2e2; color: #ef4444; }
+.priority.medium { background: #fef3c7; color: #d97706; }
+.priority.low { background: #dcfce7; color: #10b981; }
+
+.suggestion-item p {
+  color: #475569e6;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 28px;
+}
+
+/* --- Error State --- */
+.error-container {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  .back-btn {
+    position: static; /* Stack button on top for mobile */
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  .skills-grid { grid-template-columns: 1fr; }
+  .analysis-header h1 { font-size: 2rem; }
+  .suggestions-section { padding: 20px; }
+}

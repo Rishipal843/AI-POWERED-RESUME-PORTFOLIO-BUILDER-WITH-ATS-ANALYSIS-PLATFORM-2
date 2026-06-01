@@ -1,0 +1,142 @@
+/* --- About Page Styling --- */
+
+.about-page {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-hero {
+  padding: 120px 20px 80px;
+  text-align: center;
+}
+
+.about-hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Split Section */
+.about-split-section {
+  padding: 100px 0;
+  background-color: #fcfcfc;
+}
+
+.about-split-section .about-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-text-content {
+  flex: 1;
+}
+
+.about-h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1f36;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.about-p {
+  font-size: 1.1rem;
+  color: #4f566b;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Stats Row */
+.about-stats-row {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat-item h3 {
+  font-size: 2.2rem;
+  color: #f15a24;
+  margin: 0;
+}
+
+.stat-item p {
+  color: #697386;
+  font-weight: 600;
+}
+
+/* Visual Box with Navy Card */
+.about-visual-box {
+  flex: 1;
+}
+
+.about-glass-card {
+  background: #1a1f36;
+  height: 380px;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 30px 60px rgba(26, 31, 54, 0.15);
+}
+
+/* Values Grid */
+.values-section {
+  padding: 120px 0;
+}
+
+.about-h2-centered {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  padding: 50px 35px;
+  border-radius: 32px;
+  border: 1px solid #f0f2f5;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  border-color: #f15a24;
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #1a1f36;
+}
+
+.value-card p {
+  color: #697386;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-split-section .about-container { flex-direction: column; text-align: center; }
+  .about-stats-row { justify-content: center; }
+  .values-grid { grid-template-columns: 1fr; }
+  .about-h2 { font-size: 2.2rem; }
+}

@@ -1,0 +1,54 @@
+.resume-pages {
+  display: flex;
+  justify-content: center;
+  background: #525659;
+  padding: 40px 0;
+}
+
+/* MAIN CONTENT */
+.resume-content {
+  width: 210mm;
+  padding: 10mm;
+  background: white;
+  box-sizing: border-box;
+
+  /* MAGIC MULTI-PAGE SYSTEM */
+  column-width: 210mm;
+  column-gap: 40px;
+}
+
+/* Let long resume sections flow between pages; individual template blocks handle sensible breaks. */
+.page-section {
+  break-inside: auto;
+  page-break-inside: auto;
+  margin-bottom: 15px;
+}
+
+/* Center header */
+.center {
+  text-align: center;
+}
+
+/* Links styling */
+.links {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* PAGE BREAK VISUAL LINE */
+.resume-content {
+  background:
+    linear-gradient(
+      to bottom,
+      white 0%,
+      white calc(297mm - 1px),
+      #ccc calc(297mm - 1px),
+      #ccc 297mm
+    );
+  background-size: 100% 297mm;
+}
+
+/* Shadow like real pages */
+.resume-content {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,326 @@
+/* --- Pricing Page Redesign --- */
+
+.pricing-page {
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 60px;
+}
+
+.pricing-hero {
+  padding: 100px 20px 60px;
+  text-align: center;
+}
+
+.pricing-grid-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+.pricing-flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+/* Card Base Styles */
+.pricing-card-v2 {
+  flex: 1;
+  max-width: 400px;
+  padding: 60px 40px;
+  border-radius: 40px;
+  border: 1px solid #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Free/Basic Card Styling */
+.free-card {
+  background: #fff;
+}
+
+.free-card:hover {
+  border-color: #e2e8f0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+}
+
+/* Pro Card Styling - Dark Navy */
+.pro-card {
+  background: #1a1f36;
+  border-color: #1a1f36;
+  color: #fff;
+  transform: scale(1.05); /* Make pro card slightly larger */
+  box-shadow: 0 30px 60px rgba(26, 31, 54, 0.2);
+}
+
+.card-popular-tag {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  background: #f15a24;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* Plan Typography */
+.plan-name-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f15a24;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.pro-card .plan-name-badge { color: #f15a24; }
+
+.plan-price-main {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1f36;
+  margin-bottom: 10px;
+}
+
+.pro-card .plan-price-main { color: #fff; }
+
+.price-suffix {
+  font-size: 1rem;
+  color: #697386;
+  font-weight: 500;
+}
+
+.pro-card .price-suffix { color: #a0aec0; }
+
+.plan-description-text {
+  color: #697386;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.pro-card .plan-description-text { color: #cbd5e0; }
+
+/* Features List */
+.plan-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 45px 0;
+  flex-grow: 1;
+}
+
+.plan-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.feat-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.feat-icon.check { background: #f15a2420; color: #f15a24; }
+.feat-icon.cross { background: #f0f2f5; color: #cbd5e0; }
+
+.pro-card .feat-icon.check { background: #f15a24; color: #fff; }
+.feat-disabled { opacity: 0.4; text-decoration: line-through; }
+
+/* Buttons */
+.btn-pricing-action {
+  width: 100%;
+  padding: 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.btn-orange {
+  background: #f15a24;
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background: #ff6b3d;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid #e2e8f0;
+  color: #1a1f36;
+}
+
+.btn-outline:hover {
+  background: #f8f9fa;
+  border-color: #cbd5e0;
+}
+
+
+
+
+
+/* --- Pricing Page Final CTA --- */
+
+.pricing-cta-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.pricing-cta-container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.pricing-cta-glass-card {
+  position: relative;
+  background: #1a1f36; /* Deep Navy */
+  border-radius: 48px;
+  padding: 80px 40px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px rgba(26, 31, 54, 0.15);
+}
+
+/* The "AI Glow" Effect */
+.pricing-cta-glow {
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 120%;
+  height: 200%;
+  background: radial-gradient(
+    circle, 
+    rgba(241, 90, 36, 0.12) 0%, 
+    rgba(26, 31, 54, 0) 65%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pricing-cta-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-cta-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e0;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.pricing-cta-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.text-orange-glow {
+  color: #f15a24;
+  text-shadow: 0 0 25px rgba(241, 90, 36, 0.2);
+}
+
+.pricing-cta-subtitle {
+  color: #a0aec0;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.btn-pricing-cta {
+  background: #f15a24;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 18px 45px;
+  border-radius: 100px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(241, 90, 36, 0.4);
+}
+
+.btn-pricing-cta:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: #ff6b3d;
+  box-shadow: 0 15px 30px rgba(241, 90, 36, 0.5);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-pricing-cta:hover .cta-arrow {
+  transform: translateX(6px);
+}
+
+.pricing-cta-stats {
+  margin-top: 30px;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.pricing-cta-stats strong {
+  color: #cbd5e0;
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  .pricing-cta-glass-card {
+    padding: 60px 25px;
+    border-radius: 35px;
+  }
+  .pricing-cta-title {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+  .btn-pricing-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pricing-flex-row { flex-direction: column; align-items: center; }
+  .pro-card { transform: none; }
+  .pricing-card-v2 { width: 100%; }
+}
