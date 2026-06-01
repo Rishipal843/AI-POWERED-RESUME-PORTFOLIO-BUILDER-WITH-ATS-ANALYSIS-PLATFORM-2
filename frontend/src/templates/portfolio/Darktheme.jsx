@@ -66,7 +66,7 @@ const handleSubmit = async (e) => {
 
   try {
     // 2. Send the data to your backend
-    const response = await axios.post("http://localhost:8000/api/messages", formdata);
+    const response = await axios.post("https://ai-powered-resume-portfolio-builder-with.onrender.com/api/messages", formdata);
     
     // 3. Check for success status from your API
     if (response.data.statuscode === 1) {

@@ -5,7 +5,7 @@ let email;
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://localhost:8000/auth/google/callback" // 🔥 FULL URL
+  callbackURL: "https://ai-powered-resume-portfolio-builder-with.onrender.com/auth/google/callback" // 🔥 FULL URL
 },
 async (accessToken, refreshToken, profile, done) => {
 

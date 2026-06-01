@@ -12,7 +12,7 @@ const ProtectedRoute = ({ children }) => {
         const checkAuth = async () => {
             try {
                 const response = await axios.post(
-                    "http://localhost:8000/api/verify",
+                    "https://ai-powered-resume-portfolio-builder-with.onrender.com/api/verify",
                     {},
                     { withCredentials: true }
                 );

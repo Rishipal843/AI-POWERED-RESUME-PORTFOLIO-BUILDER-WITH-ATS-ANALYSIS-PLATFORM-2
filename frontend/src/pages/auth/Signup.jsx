@@ -16,7 +16,7 @@ const Signup = () => {
 
  
   const handleLogin = () => {
-    window.open('http://localhost:8000/auth/google', '_self');
+    window.open('https://ai-powered-resume-portfolio-builder-with.onrender.com/auth/google', '_self');
   };
 
   
@@ -24,7 +24,7 @@ const Signup = () => {
   e.preventDefault();
   try {
     const response = await axios.post(
-      "http://localhost:8000/api/register",
+      "https://ai-powered-resume-portfolio-builder-with.onrender.com/api/register",
       { name, email, Password },
       { withCredentials: true } // ADD THIS LINE
     );

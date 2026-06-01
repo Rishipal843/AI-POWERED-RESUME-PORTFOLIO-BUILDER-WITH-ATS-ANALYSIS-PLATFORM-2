@@ -20,7 +20,7 @@ const Navbar = () => {
     try {
       const email = Cookies.get("username");
       if (!email) return;
-      const response = await axios.get(`http://localhost:8000/api/dashboard/${email}`);
+      const response = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/dashboard/${email}`);
       const result = response.data;
       if(result.statuscode === 1){
         setname(result.data.name)

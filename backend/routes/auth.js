@@ -44,7 +44,7 @@ router4.get('/google/callback',
     });
 
 
-    res.redirect(`http://localhost:5173/dashboard`);
+    res.redirect(`https://ai-powered-resume-portfolio-builder-lemon.vercel.app/dashboard`);
   }
 );
 

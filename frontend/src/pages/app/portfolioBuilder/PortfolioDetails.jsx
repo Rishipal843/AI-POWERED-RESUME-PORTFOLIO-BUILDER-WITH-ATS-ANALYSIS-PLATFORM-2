@@ -16,7 +16,7 @@ const PortfolioDetails = () => {
 
     const fetchPortfolio = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/api/portfolio/${slug}`);
+        const res = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/portfolio/${slug}`);
         setPortfolio(res.data.data);
       } catch (err) {
         console.log(err);
@@ -30,7 +30,7 @@ const PortfolioDetails = () => {
   useEffect(() => {
     const fetchmessages = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/getmessages/${slug}`);
+        const response = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/getmessages/${slug}`);
         const result = response.data;
 
         if (result.statuscode === 1) {
@@ -50,7 +50,7 @@ const PortfolioDetails = () => {
 
   const deletePortfolio = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8000/api/delportfolio/${slug}`);
+      const response = await axios.delete(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/delportfolio/${slug}`);
       if (response.data.statuscode === 1) {
         Navigate(-1);
       }
@@ -66,11 +66,11 @@ const PortfolioDetails = () => {
       <header className="pd-top-nav">
         <div className="pd-nav-info">
           <h2 className="pd-nav-title">{portfolio.slug}</h2>
-          <span className="pd-nav-url">http://localhost:8000/{portfolio.slug}</span>
+          <span className="pd-nav-url">https://ai-powered-resume-portfolio-builder-with.onrender.com/{portfolio.slug}</span>
         </div>
         <div className="pd-nav-actions">
           <button className="pd-btn-secondary" onClick={deletePortfolio}>Delete</button>
-          <Link to={`http://localhost:8000/${portfolio.slug}`} className="pd-btn-primary">Open Live Site</Link>
+          <Link to={`https://ai-powered-resume-portfolio-builder-with.onrender.com/${portfolio.slug}`} className="pd-btn-primary">Open Live Site</Link>
         </div>
       </header>
 
@@ -81,7 +81,7 @@ const PortfolioDetails = () => {
               <div className="pd-dots"><span></span><span></span><span></span></div>
               <div className="pd-address-bar">https://preview-mode.io</div>
             </div>
-            <iframe className="pd-iframe-container" src={`http://localhost:8000/${portfolio.slug}`} frameBorder="0"></iframe>
+            <iframe className="pd-iframe-container" src={`https://ai-powered-resume-portfolio-builder-with.onrender.com/${portfolio.slug}`} frameBorder="0"></iframe>
           </div>
         </section>
 

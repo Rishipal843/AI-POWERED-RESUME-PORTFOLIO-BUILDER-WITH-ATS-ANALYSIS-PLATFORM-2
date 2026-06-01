@@ -11,7 +11,7 @@ useEffect(()=>{
 
 const fetchData = async ()=>{
 
-const response = await axios.get("http://localhost:8000/api/userdata")
+const response = await axios.get("https://ai-powered-resume-portfolio-builder-with.onrender.com/api/userdata")
 const result = response.data
 setData(result.data)
 

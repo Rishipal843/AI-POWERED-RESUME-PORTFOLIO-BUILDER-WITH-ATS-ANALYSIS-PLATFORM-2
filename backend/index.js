@@ -18,7 +18,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-    origin: "http://localhost:5173", 
+    origin: "https://ai-powered-resume-portfolio-builder-lemon.vercel.app",
     credentials: true 
 }));
 

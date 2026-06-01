@@ -24,7 +24,7 @@ useEffect(() => {
    const fetchuser = async()=>{
     try {
       const email = Cookies.get("username");
-      const response = await axios.get(`http://localhost:8000/api/dashboard/${email}`);
+      const response = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/dashboard/${email}`);
       const result = response.data;
       if(result.statuscode === 1){
         setname(result.data.name)
@@ -42,7 +42,7 @@ useEffect(() => {
 useEffect(() => {
     const fetchportfolios = async()=>{
             const email = Cookies.get("username");
-      const response = await axios.get(`http://localhost:8000/api/dashboardportfolios/${email}`);
+      const response = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/dashboardportfolios/${email}`);
       const result = response.data;
       if(result.statuscode === 1){
         setportfolios(result.data.length)

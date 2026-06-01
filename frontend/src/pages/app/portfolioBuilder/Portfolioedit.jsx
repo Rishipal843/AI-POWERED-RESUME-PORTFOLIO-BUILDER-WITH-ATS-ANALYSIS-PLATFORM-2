@@ -90,7 +90,7 @@ const Portfolioedit = () => {
         formdata.append("projects", JSON.stringify(projects))
         formdata.append("contact", JSON.stringify(contact))
         formdata.append("bgImages",JSON.stringify(bgImages))
-        const request = await axios.post("http://localhost:8000/api/portfolio", 
+        const request = await axios.post("https://ai-powered-resume-portfolio-builder-with.onrender.com/api/portfolio", 
             formdata
         )
         const result = await request.data

@@ -14,7 +14,7 @@ const Userportfolios = () => {
       try {
         const email = Cookies.get("username");
         const res = await axios.get(
-          `http://localhost:8000/api/user-portfolios/${email}`
+          `https://ai-powered-resume-portfolio-builder-with.onrender.com/api/user-portfolios/${email}`
         );
         
         // SORTING LOGIC: Newest first based on createdAt

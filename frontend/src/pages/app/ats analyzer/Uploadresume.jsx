@@ -19,7 +19,7 @@ const Uploadresume = () => {
   
 
 const getcount=async()=>{
-  // const response= await axios.get(`http://localhost:8000/api/userresume/${useremail}`)
+  // const response= await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/userresume/${useremail}`)
   // const result = await response.data.data
   // const length = result.length
   // if(length > 2){
@@ -47,7 +47,7 @@ const getcount=async()=>{
     // formdata.append("counter",count)
 
 
-    const response = await axios.post("http://localhost:8000/api/upload",formdata)
+    const response = await axios.post("https://ai-powered-resume-portfolio-builder-with.onrender.com/api/upload",formdata)
      const result= await response.data
     if(result.statuscode==0){
       

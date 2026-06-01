@@ -16,7 +16,7 @@ const Portfoliorenderer = () => {
 
     const fetchPortfolio = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/api/portfolio/${slug}`);
+        const res = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/portfolio/${slug}`);
         setPortfolio(res.data.data);
       } catch (err) {
         console.log(err);

@@ -30,7 +30,7 @@ const Portfolioupdate = () => {
     useEffect(() => {
         const fetchResponse = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/portfolioid/${id}`);
+                const res = await axios.get(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/portfolioid/${id}`);
                 const result = res.data;
 
                 if (result.statuscode === 1) {
@@ -87,7 +87,7 @@ const Portfolioupdate = () => {
 //         formdata.append("bgImages", JSON.stringify(bgImages));
 
 //         try {
-//             const request = await axios.put(`http://localhost:8000/api/updateportfolio/${id}`, formdata);
+//             const request = await axios.put(`https://ai-powered-resume-portfolio-builder-with.onrender.com/api/updateportfolio/${id}`, formdata);
 //             if (request.data.statuscode === 1) {
 //                 alert("Portfolio updated successfully!");
 //                 navigate("/userportfolios");
@@ -115,7 +115,7 @@ const Portfolioupdate = () => {
     }
 
     const request = await axios.put(
-        `http://localhost:8000/api/updateportfolio/${id}`,
+        `https://ai-powered-resume-portfolio-builder-with.onrender.com/api/updateportfolio/${id}`,
         payload,
     )
 
